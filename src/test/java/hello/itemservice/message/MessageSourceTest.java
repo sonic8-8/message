@@ -1,6 +1,5 @@
 package hello.itemservice.message;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +30,7 @@ public class MessageSourceTest {
     @Test
     void notFoundMessageCode() {
         // given // when // then
-        assertThatThrownBy(() -> ms.getMessage("no_code", null,null))
+        assertThatThrownBy(() -> ms.getMessage("no_code", null, null))
                 .isInstanceOf(NoSuchMessageException.class);
     }
 
