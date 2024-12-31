@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.List;
+import java.util.*;
 
 @Controller
 @RequestMapping("/message/items")
@@ -57,6 +57,7 @@ public class MessageItemController {
         itemRepository.update(itemId, item);
         return "redirect:/message/items/{itemId}";
     }
+
 
 }
 
